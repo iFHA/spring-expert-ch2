@@ -1,10 +1,12 @@
 package dev.fernando.demo.dto;
 
 import dev.fernando.demo.entities.City;
+import jakarta.validation.constraints.NotBlank;
 
 public class CityDTO {
 	
 	private Long id;
+	@NotBlank(message = "Campo requerido")
 	private String name;
 	
 	public CityDTO() {

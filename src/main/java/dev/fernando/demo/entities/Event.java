@@ -2,6 +2,7 @@ package dev.fernando.demo.entities;
 
 import java.time.LocalDate;
 
+import dev.fernando.demo.dto.EventDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -33,6 +34,14 @@ public class Event {
 		this.name = name;
 		this.date = date;
 		this.url = url;
+		this.city = city;
+	}
+
+	public Event(EventDTO dto, City city) {
+		this.id = dto.getId();
+		this.name = dto.getName();
+		this.date = dto.getDate();
+		this.url = dto.getUrl();
 		this.city = city;
 	}
 
